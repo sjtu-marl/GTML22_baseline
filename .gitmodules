@@ -1,0 +1,3 @@
+[submodule "Competition_Olympics-Running"]
+	path = Competition_Olympics-Running
+	url = git@github.com:sjtu-marl/Competition_Olympics-Running.git
