@@ -1,9 +1,15 @@
 # GTML22_baseline
 SJTU course AI3617
 
+## Prerequisite
+
+**1. Submodule updates**: Clone this repository to your local workspcae, then run `git submodule upate --init` to pull submodules.
+
+**2. Install Requirements**: run `pip install -r reuqirements.txt`
+
 ## PettingZoo
 
-Coming soon...
+algorithm and environment: `ptzoo/`, training examples are listed under: `examples/pettingzoo_*.py`
 
 ## RLCard
 
