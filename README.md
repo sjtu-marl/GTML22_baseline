@@ -15,8 +15,11 @@ Details regarding installation of IsaacGym can be found [here](https://developer
 
 ## PettingZoo
 
-algorithm and environment: `ptzoo/`, training examples are listed under: `examples/pettingzoo_*.py`
+We provide 2 ways:
 
+1. algorithm and environment: `ptzoo/`, training examples are listed under: `examples/pettingzoo_*.py`
+
+2. a lightweight framework based on tianshou, https://github.com/Leo-xh/MARL-Comm
 
 ## RLCard
 

@@ -4,3 +4,6 @@
 [submodule "IsaacGymEnvs"]
 	path = IsaacGymEnvs
 	url = https://github.com/NVIDIA-Omniverse/IsaacGymEnvs.git
+[submodule "MARL-Comm"]
+	path = MARL-Comm
+	url = git@github.com:Leo-xh/MARL-Comm.git
