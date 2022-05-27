@@ -23,6 +23,8 @@ from torch.distributions.utils import lazy_property
 from torch.distributions import utils as distr_utils
 from torch.distributions.categorical import Categorical as TorchCategorical
 
+from common import misc
+
 
 class Distribution(ABC):
     """Abstract base class for distributions."""
@@ -841,10 +843,12 @@ class MaskedCategorical:
         This is just a technical workaround that allows `Categorical` class usage.
         If probs doesn't sum to one there will be an exception during sampling.
         """
-        probs = F.softmax(logits, dim=-1) * mask
-        probs = probs + (mask.sum(dim=-1, keepdim=True) == 0.0).to(dtype=torch.float32)
-        Z = probs.sum(dim=-1, keepdim=True)
-        return probs / Z
+        # probs = F.softmax(logits, dim=-1) * mask
+        # probs = probs + (mask.sum(dim=-1, keepdim=True) == 0.0).to(dtype=torch.float32)
+        # Z = probs.sum(dim=-1, keepdim=True)
+        logits = misc.masked_logits(logits, mask)
+        probs = F.softmax(logits)
+        return probs
 
 
 def make_proba_distribution(

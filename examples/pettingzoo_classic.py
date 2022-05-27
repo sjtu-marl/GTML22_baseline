@@ -7,13 +7,8 @@ Training script for Pettingzoo poker games.
 @date: 2022/04/26 01:04:42 PM
 """
 
-from typing import Dict, Any
-
-import os
 import argparse
 import gym
-
-import numpy as np
 
 from torch.utils import tensorboard
 from common.preprocessor import get_preprocessor
@@ -22,7 +17,7 @@ from ptzoo import env_desc_gen
 from ptzoo.algorithms import pg
 from common.agent_interface import AgentInterface, AgentInterfaceManager
 from common.sampler import get_sampler
-from common.rollout import get_rollout_func, Evaluator, sequential_rollout
+from common.rollout import Evaluator, sequential_rollout
 from common.logger import write_to_tensorboard
 from common.data import EpisodeKeys
 
